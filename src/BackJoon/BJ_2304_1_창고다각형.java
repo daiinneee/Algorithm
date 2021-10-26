@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 현재 그림에서 가장 높은 지붕의 높이 : 10
 지붕의 최대 높이의 인덱스 : 8
 */
-public class BJ_2304_창고다각형 {
+public class BJ_2304_1_창고다각형 {
 
     static int[] map;
 
@@ -74,15 +74,21 @@ public class BJ_2304_창고다각형 {
         int h = 0;
 
         for(int i=min_idx; i<max_hight_idx; i++){
+            // h = Math.max(h, map[i])
+            // 처음에 h=0, map[2]=4 sum = 4
+            // h=4 map[3]=0 sum=8
+            // h=4 map[4]=6 h=6 sum=14
+            // h=6 map[5]=3 6>3 h=6 sum=14+6=20
+            // h=6 map[6]=0 6>0 h=6 sum=20+6=26
             h = Math.max(h, map[i]);
             sum += h;
         }
 
+        // h를 0으로 초기화
         h = 0;
 
         for(int i=max_idx; i>max_hight_idx; i--){
             h = Math.max(h, map[i]);
-
             sum += h;
         }
 

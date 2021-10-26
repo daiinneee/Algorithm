@@ -15,7 +15,6 @@ public class Prac_Queue {
         pq.offer(18);
         pq.add(8);
 
-        // 우선 순위가 가장 높은 데이터를 확인하고 큐에서 빼고 싶지 않을 경우 peek() 메소드를 이용
         // 출력 : 1
         System.out.println(pq.peek());
 

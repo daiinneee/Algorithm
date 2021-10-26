@@ -25,7 +25,9 @@ ex. 4개의 문서(A, B, C, D)가 순서대로 인쇄 대기목록에 있고 중
 3. location은 0이상 (현재 대기목록에 있는 작업 수 -1) 이하의 값을 가지며
    대기목록의 가장 앞에 있으면 0, 두 번째에 있으면 1로 표현
 */
-class PG_프린터 {
+
+/* PriorityQueue 사용 */
+class PG_프린터_1 {
 
     public int solution(int[] priorities, int location) {
         int answer = 0;
@@ -41,13 +43,15 @@ class PG_프린터 {
         // 2. priorities값을 우선순위 큐에 담는다
         for(int n : priorities){
             // add(value), offer(value) 메소드를 이용해서 큐에 값을 넣을 수 있음
+            // priorities 배열 : [1, 1, 9, 1, 1, 1]
+            // ex. 9 1 1 1 1 1
             pq.offer(n);
         }
 
         // 3. 큐가 빌 때 까지 반복 == 모든 대기목록이 비워질 때 까지
         while(!pq.isEmpty()){
             // 4. 큐에서 나오는 값과 매칭되는 경우를 탐색
-            for(int i = 0;i<priorities.length;i++){
+            for(int i = 0; i < priorities.length; i++){
                 // 5. 값만 일치하는 경우 해당 문서 출력
                 // 큐에 있는 첫 번째 데이터를 참조만하고 지우고 싶지 않은 경우
                 // peek() 메소드나 element() 메소드를 이용
@@ -56,12 +60,12 @@ class PG_프린터 {
                     pq.poll();
                     answer++;
                     // 6. 값과 위치가 모두 일치하면 answer을 반환
-                    if(location == i ) return answer;
+                    if(location == i) return answer;
                 }
             }
 
         }
-
+        // 문서가 몇 번째로 인쇄되는지 return
         return answer;
     }
 }

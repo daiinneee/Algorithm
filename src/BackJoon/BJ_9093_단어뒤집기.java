@@ -45,5 +45,30 @@ public class BJ_9093_단어뒤집기 {
 //        for (String result : results) {
 //            System.out.println(result);
 //        }
+
+        /*
+        1. 문자를 입력 받는다
+        2. 문자를 ""를 기준으로 나눈다(split 사용)
+        3. 나눈 문자를 새로운 배열에 넣는다
+        4. 배열의 첫번쨰 요소부터 문자를 역순을 뽑고 출력한다
+        */
+//        Scanner sc=new Scanner(System.in);
+//        int n=sc.nextInt();
+//        sc.nextLine(); //엔터제거
+//
+//        for(int i=0;i<n;i++) {
+//            String str1=sc.nextLine();
+//            String[] str2=str1.split(" ");
+//            for(int j=0;j<str2.length;j++) {
+//                String str3="";
+//                for(int k=str2[j].length()-1;k>=0;k--) {
+//                    str3+=str2[j].charAt(k);
+//                }
+//                System.out.println(str3);
+//            }
+//
+//
+//
+//        }
     }
 }

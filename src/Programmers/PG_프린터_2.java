@@ -52,6 +52,8 @@ public class PG_프린터_2 {
         */
         while(!queue.isEmpty()){
             // Queue에서 가장 앞에 위치한 Task 뽑기
+            // priorities 배열에 [2, 1, 3, 2]가 있다고 가정, location은 2라고 가정
+            // 현재 cur = 2
             Task cur = queue.poll();
             // flag 변수 선언
             boolean flag = false;

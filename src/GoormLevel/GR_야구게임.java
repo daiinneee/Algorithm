@@ -82,14 +82,18 @@ public class GR_야구게임 {
                 }
             }
             System.out.println(strike + "스트라이크" + " " + ball + "볼");
-            strike = 0;
-            ball = 0;
 
             if(strike >= 3){
                 loop = false;
             }
+            
+            // strike, ball 수 초기화
+            strike = 0;
+            ball = 0;
+            // 횟수 1 증가
             count = count + 1;
         }
+
         System.out.println("횟수 : " + (count - 1));
         System.out.println("Game Over");
         sc.close();

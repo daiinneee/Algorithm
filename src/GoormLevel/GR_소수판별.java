@@ -1,9 +1,12 @@
 package GoormLevel;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class GR_소수판별 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 //        int count=0;
 //        for(int i=2; i<=100; i++){
 //            for(int j=2; j<=i; j++){
@@ -20,6 +23,7 @@ public class GR_소수판별 {
 //        }
 
         /* 소수의 공식 : 선택된 수가 선택된 수보다 작은 수들과 나눠지면 소수가 아님 */
+        /* 방법 1
         String number;
         Scanner scan = new Scanner(System.in);
         number = scan.nextLine();
@@ -34,5 +38,20 @@ public class GR_소수판별 {
             }
         }
         System.out.println(isFindPrime == false ? "False" : "True");
+        */
+
+        /* 방법 2 */
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String input = br.readLine();
+        int n = Integer.parseInt(input);
+        boolean result = true;
+
+        for(int i = 2; i < n; i++){
+            if(n%i == 0){
+                result = false;
+                break;
+            }
+        }
+        System.out.println(result == false ? "False" : "True");
     }
 }

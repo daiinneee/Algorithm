@@ -25,6 +25,8 @@ public class GR_369게임_calcul {
             int count = calcul(i);
             if(count == 0){
                 System.out.println("");
+                // continue를 수행하므로 for문 처음으로 다시 돌아감
+                // 만약 break를 사용했다면 for 문 탈출
                 continue;
             }
             System.out.println(i + " ");
@@ -48,6 +50,8 @@ public class GR_369게임_calcul {
         /* 방법 1
         // 3 6 9 들어 있는지 확인
         for(int i=0; i<chkNum.length(); i++){
+            // char -> int로 변환
+            // Character.getNumericValue() 함수 사용!
             int result = Character.getNumericValue(chkNum.charAt(i));
             // 검색한 숫자가 0일때
             if(result==0){

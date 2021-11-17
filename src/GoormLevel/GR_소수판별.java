@@ -49,6 +49,7 @@ public class GR_소수판별 {
         for(int i = 2; i < n; i++){
             if(n%i == 0){
                 result = false;
+                // break를 수행하므로 for 문 탈출, 반복문 끝
                 break;
             }
         }

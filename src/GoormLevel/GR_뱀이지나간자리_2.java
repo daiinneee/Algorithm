@@ -19,7 +19,7 @@ public class GR_뱀이지나간자리_2 {
         int b = Integer.parseInt(st.nextToken());
 
         for(int i=1; i<=a; i++){
-            if(a%2!=0){
+            if(i%2!=0){
                 for(int j=1; j<=b; j++){
                     System.out.print("#");
                 }

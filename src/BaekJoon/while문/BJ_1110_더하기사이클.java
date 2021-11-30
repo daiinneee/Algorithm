@@ -12,8 +12,6 @@ public class BJ_1110_더하기사이클 {
         int n = Integer.parseInt(input);
         int temp = n;
         int count = 0;
-        String result = "";
-        int sum = 0;
 
         // 언제까지 반복하느냐?
         while (true) {

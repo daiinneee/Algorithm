@@ -14,9 +14,6 @@ public class BJ_2908_상수_뒤집기_2 {
         // str로 주어진 매개값을 버퍼의 초기값으로 저장
         StringBuilder sb = new StringBuilder(st.nextToken());
         int a = Integer.parseInt(sb.reverse().toString());
-//        StringBuilder sb = new StringBuilder();
-//        sb.append(st.nextToken());
-//        int a = Integer.parseInt(sb.reverse().toString());
 
         sb = new StringBuilder(st.nextToken());
         int b = Integer.parseInt(sb.reverse().toString());

@@ -3,7 +3,6 @@ package BaekJoon.문자열;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class BJ_2675_문자열반복 {
